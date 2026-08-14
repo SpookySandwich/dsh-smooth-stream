@@ -1,0 +1,4 @@
+# dsh-smooth-stream: client-only UI plugin. The host half is a no-op.
+- insert:
+    - id: smooth-stream
+      name: dsh-smooth-stream
