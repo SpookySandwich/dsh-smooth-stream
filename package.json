@@ -18,7 +18,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpookySandwich/dsh-smooth-stream.git"
+    "url": "git+https://github.com/SpookySandwich/dsh-plugin-smooth-stream.git"
   },
   "keywords": [
     "dsh",

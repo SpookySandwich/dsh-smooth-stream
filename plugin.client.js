@@ -1,4 +1,4 @@
-// dsh-smooth-stream v1
+// dsh-plugin-smooth-stream v1
 // Smooth assistant output for DeepSeek Harness.
 
 const SUMMARY_TICK_MS = 1000;

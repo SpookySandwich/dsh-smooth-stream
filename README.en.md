@@ -1,4 +1,4 @@
-# dsh-smooth-stream
+# dsh-plugin-smooth-stream
 
 [简体中文](README.md) | English
 
