@@ -9,7 +9,7 @@
 ## 安装
 
 ```bash
-dsh plugin --profile web add github:SpookySandwich/dsh-smooth-stream
+dsh plugin --profile web add dsh-plugin-smooth-stream
 ```
 
 ## License

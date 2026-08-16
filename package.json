@@ -1,7 +1,7 @@
 {
-  "name": "dsh-smooth-stream",
+  "name": "dsh-plugin-smooth-stream",
   "version": "1.0.0",
-  "description": "DeepSeek Harness plugin: reveal assistant replies in calm fading chunks instead of token-by-token twitch.",
+  "description": "Better streaming text animation for DeepSeek Harness.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
