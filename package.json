@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-smooth-stream",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Better streaming text animation for DeepSeek Harness.",
   "type": "module",
   "main": "lib/index.js",

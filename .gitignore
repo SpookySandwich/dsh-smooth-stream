@@ -1,9 +1,4 @@
-pkg-*.client.js
-_deploy-*.mjs
-_wrap-client.mjs
-_awesome-prs/
-_demo-frames/
 *.log
+*.tgz
 .DS_Store
 Thumbs.db
-TODO.md
