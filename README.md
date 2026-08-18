@@ -8,7 +8,7 @@
 
 把逐字抖动的流式输出，换成按段落分批、淡入呈现的阅读体验。流式期间平滑跟随滚动，思考块显示实时单行摘要。
 
-![demo](assets/demo.gif)
+![demo](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/demo.gif)
 
 ## 安装
 
@@ -45,13 +45,13 @@ dsh plugin --profile web add dsh-plugin-smooth-stream
 
 | 淡入 Fade | 上升 Rise |
 |---|---|
-| ![fade](assets/variants/fade.gif) | ![rise](assets/variants/rise.gif) |
+| ![fade](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/fade.gif) | ![rise](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/rise.gif) |
 | **浮现 Dissolve** | **拂过 Wipe** |
-| ![dissolve](assets/variants/dissolve.gif) | ![wipe](assets/variants/wipe.gif) |
+| ![dissolve](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/dissolve.gif) | ![wipe](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/wipe.gif) |
 | **聚焦 Focus** | **映亮 Glow** |
-| ![focus](assets/variants/focus.gif) | ![glow](assets/variants/glow.gif) |
+| ![focus](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/focus.gif) | ![glow](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/glow.gif) |
 | **晕开 Iris** | **洇染 Soak** |
-| ![iris](assets/variants/iris.gif) | ![soak](assets/variants/soak.gif) |
+| ![iris](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/iris.gif) | ![soak](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/soak.gif) |
 
 ## 兼容性
 

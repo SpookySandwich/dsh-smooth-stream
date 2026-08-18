@@ -8,7 +8,7 @@
 
 Replaces token-by-token streaming twitch with paragraph-batched, fading reveals. Scroll follows smoothly while streaming, and reasoning blocks show a live one-line summary.
 
-![demo](assets/demo.gif)
+![demo](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/demo.gif)
 
 ## Install
 
@@ -45,13 +45,13 @@ Eight entrances, each tuned to its own rhythm; all recorded over the same reply 
 
 | Fade | Rise |
 |---|---|
-| ![fade](assets/variants/fade.gif) | ![rise](assets/variants/rise.gif) |
+| ![fade](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/fade.gif) | ![rise](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/rise.gif) |
 | **Dissolve** | **Wipe** |
-| ![dissolve](assets/variants/dissolve.gif) | ![wipe](assets/variants/wipe.gif) |
+| ![dissolve](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/dissolve.gif) | ![wipe](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/wipe.gif) |
 | **Focus** | **Glow** |
-| ![focus](assets/variants/focus.gif) | ![glow](assets/variants/glow.gif) |
+| ![focus](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/focus.gif) | ![glow](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/glow.gif) |
 | **Iris** | **Soak** |
-| ![iris](assets/variants/iris.gif) | ![soak](assets/variants/soak.gif) |
+| ![iris](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/iris.gif) | ![soak](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/variants/soak.gif) |
 
 ## Compatibility
 
