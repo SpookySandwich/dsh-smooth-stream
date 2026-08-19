@@ -5,10 +5,14 @@
 [![npm](https://img.shields.io/npm/v/dsh-plugin-smooth-stream)](https://www.npmjs.com/package/dsh-plugin-smooth-stream)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![dsh](https://img.shields.io/badge/dsh-0.1.0--rc.6-4b8dff)](https://github.com/deepseek-ai/deepseek-harness)
+[![deepseek1024](https://img.shields.io/badge/deepseek1024-listed-4b8dff)](https://deepseek1024.com/plugins/SpookySandwich/dsh-smooth-stream)
+[![stars](https://img.shields.io/github/stars/SpookySandwich/dsh-plugin-smooth-stream?style=flat&label=stars)](https://github.com/SpookySandwich/dsh-plugin-smooth-stream/stargazers)
 
 Replaces token-by-token streaming twitch with paragraph-batched, fading reveals. Scroll follows smoothly while streaming, and reasoning blocks show a live one-line summary.
 
-![demo](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/demo.gif)
+**Left: native DSH rendering · Right: Smooth Stream** — same question, started together:
+
+![comparison demo](https://raw.githubusercontent.com/SpookySandwich/dsh-plugin-smooth-stream/main/assets/demo.gif)
 
 ## Install
 
