@@ -1024,8 +1024,21 @@ return {
       'Streaming does not have to twitch in token by token — batches land as calm, designed motion instead.',
       '试着把「分批大小」调小，这里会出现更频繁的小段；调大则更接近一次成文。动画风格与时长的改动也会立刻反映在这里。',
       '分批的切割点会避开没写完的代码块和表格，所以不会看到渲染到一半的 Markdown；思考块则在折叠行里滚动显示最新一句，两端用渐隐过渡。',
-      'Each style also has its own tuned tempo: a soak takes long strokes over large batches, a wipe prefers quicker passes. Everything you change here is remembered per style and applies to real conversations immediately.',
-      'The quick brown fox jumps over the lazy dog. 敏捷的棕色狐狸跳过懒狗。'
+      'Each style has its own tuned tempo: a soak takes long strokes over large batches, a wipe prefers quicker passes. Everything you change here is remembered per style.',
+      '八种入场动画各有性格：淡入最克制，上升带一点位移，浮现只有透明度的变化，拂过让一道光沿着揭示的边缘扫过。',
+      '聚焦像镜头对焦——先是一片模糊与褪色，再分两段回到清晰；映亮则让文字在一层强调色的光晕里浮现，随后冷却成正常颜色。',
+      'Iris opens a soft radial bloom from the reading corner, and soak sweeps an ink front downward at the slowest rhythm of the set. Neither uses a hard clipping edge.',
+      '这一段之后的内容需要滚动才能看到——预览面板固定高度，会像真实对话一样自动跟随到底部，你可以在这里直接看到滚动跟随的效果。',
+      'The preview pane below is fixed height on purpose. As batches arrive it follows its own bottom, exactly the way the conversation column does while a reply streams in.',
+      '关闭「流式期间平滑滚动跟随」，这里的滚动会立刻变成生硬的跳变；重新打开，它又会平滑地滑到底部。',
+      'Turn the scroll-follow checkbox off and this pane snaps instead of gliding. Turn it back on and the motion returns — the same switch governs real conversations.',
+      '正文渲染走的是 DSH 自带的 Markdown 渲染器，所以代码高亮、复制按钮、表格和 KaTeX 数学公式都与原生完全一致，插件不会替换它们。',
+      'Body text goes through the host renderer, so code highlighting, copy buttons, tables and math all look exactly like native output. The plugin changes when text appears, never how it is formatted.',
+      '如果系统开启了「减少动态效果」，所有入场动画与平滑滚动都会自动关闭，只保留即时呈现的文字。',
+      'With reduced motion enabled at the system level, every animation here switches off automatically and text simply appears.',
+      '设置面板顶部的开关可以随时关闭整个插件，对话会立刻恢复 DSH 的内置渲染，方便你直接对比两者的差别。',
+      'The master switch at the top hands rendering back to the built-in view instantly, with no reload — the quickest way to compare.',
+      'The quick brown fox jumps over the lazy dog. 敏捷的棕色狐狸跳过懒狗。',
     ].join('\n\n');
 
     function PreviewBox(props) {
