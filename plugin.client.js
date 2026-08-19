@@ -435,7 +435,8 @@ const CSS = [
   '.dss-set-check{display:flex;align-items:center;gap:10px;cursor:pointer}',
   '.dss-set-check input{accent-color:var(--dsw-alias-accent-primary,#4b8dff)}',
   '.dss-set-hint{font-size:12px;line-height:18px;color:var(--dsw-alias-label-tertiary)}',
-  '.dss-set-preview{border:1px solid var(--dsw-alias-border-secondary,rgba(128,128,128,.24));border-radius:10px;padding:14px 16px;font-size:14px;line-height:24px;color:var(--dsw-alias-label-secondary);min-height:150px}',
+  '.dss-set-preview{border:1px solid var(--dsw-alias-border-secondary,rgba(128,128,128,.24));border-radius:10px;padding:14px 16px;font-size:14px;line-height:24px;color:var(--dsw-alias-label-secondary);height:190px;overflow-y:auto}',
+  '.dss-set-preview[data-follow]{scroll-behavior:smooth}',
   '.dss-set-piece{margin:0 0 10px}',
   '.dss-set-piece:last-child{margin-bottom:0}',
   '.dss-set-actions{display:flex;gap:10px;align-items:center}',
@@ -444,7 +445,7 @@ const CSS = [
   '.dss-set-btn{padding:5px 14px;border-radius:8px;border:1px solid var(--dsw-alias-border-secondary,rgba(128,128,128,.3));background:transparent;font:inherit;font-size:13px;color:var(--dsw-alias-label-primary);cursor:pointer}',
   '.dss-set-btn:hover{background:var(--dsw-alias-interactive-bg-hover)}',
 
-  '@media (prefers-reduced-motion:reduce){.dss-smooth-follow{scroll-behavior:auto}.dss-fresh,.dss-sum-fade{animation:none;filter:none;transform:none;animation-delay:0s!important;-webkit-mask-image:none!important;mask-image:none!important;clip-path:none!important;text-shadow:none!important}.dss-fresh:after{animation:none;opacity:0}.dss-nr-root[data-state=running] .dss-nr-row:after{animation:none}.dss-nr-root[data-settling] .dss-nr-row:after{animation:none;opacity:0}}'
+  '@media (prefers-reduced-motion:reduce){.dss-smooth-follow,.dss-set-preview[data-follow]{scroll-behavior:auto}.dss-fresh,.dss-sum-fade{animation:none;filter:none;transform:none;animation-delay:0s!important;-webkit-mask-image:none!important;mask-image:none!important;clip-path:none!important;text-shadow:none!important}.dss-fresh:after{animation:none;opacity:0}.dss-nr-root[data-state=running] .dss-nr-row:after{animation:none}.dss-nr-root[data-settling] .dss-nr-row:after{animation:none;opacity:0}}'
 ].join('');
 
 /* -------------------------------------------------------- scroll follow -- */
@@ -1035,12 +1036,14 @@ return {
       // restarts the little stream from the top.
       React.useEffect(function () {
         setSegments([]);
-        let arrived = 0;
+        // The first batch is pre-arrived so the preview answers immediately
+        // instead of sitting empty while the simulated stream accumulates.
+        let arrived = Math.min(PREVIEW_TEXT.length, tune.textMinChars + 120);
         let shown = 0;
         const g = realGlobal();
         if (!g || typeof g.setInterval !== 'function') return undefined;
         const timer = g.setInterval(function () {
-          arrived = Math.min(PREVIEW_TEXT.length, arrived + 24);
+          arrived = Math.min(PREVIEW_TEXT.length, arrived + 26);
           const done = arrived >= PREVIEW_TEXT.length;
           const target = paragraphTarget(PREVIEW_TEXT.slice(0, arrived), shown, done, tune.textMinChars);
           if (target > shown) {
@@ -1053,9 +1056,20 @@ return {
         return function () { g.clearInterval(timer); };
       }, [props.replay, s.reveal, tune.fadeMs, tune.textMinChars]);
 
+      // The pane is fixed-height with its own scrollbar, and follows its
+      // bottom the same way the conversation does — so the preview also
+      // demonstrates the scroll-follow.
+      const paneRef = React.useRef(null);
+      React.useEffect(function () {
+        const el = paneRef.current;
+        if (el) el.scrollTop = el.scrollHeight;
+      }, [segments]);
+
       return React.createElement('div', {
         className: 'dss-root dss-set-preview',
+        ref: paneRef,
         'data-reveal': s.reveal,
+        'data-follow': s.smoothFollow || undefined,
         style: { '--dss-fade-ms': tune.fadeMs + 'ms' }
       }, segments.map(function (piece, i) {
         return React.createElement('div', {
